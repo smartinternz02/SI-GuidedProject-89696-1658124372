@@ -1,5 +1,5 @@
 # SI-GuidedProject-89696-1658124372
-Plant seedling classification using IBM Watson
+Plant Seedling Classification using IBM Watson
 
 Data set for the project can be found here 
 
