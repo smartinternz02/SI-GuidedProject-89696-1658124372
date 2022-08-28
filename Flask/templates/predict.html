@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <title>Plant Seedling Classification</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="static/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Custom styles for this template -->
+    <link href="static/form-validation.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-light">
+   <header>
+      
+      <div class="navbar navbar-dark bg-dark box-shadow">
+        <div class="container d-flex justify-content-between">
+          <a href="/Home" class="navbar-brand d-flex align-items-center">
+            
+			<strong>SmartBridge</strong>
+          </a>
+          <a href="/Home" class="navbar-brand d-flex align-items-right">
+            
+			<strong>Home</strong>
+          </a>
+          
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="py-5 text-center">
+          <h2>Plant Seedling Classification</h2>
+        </div>
+
+      <div class="row">
+        
+        <div class="col-md-8 order-md-1">
+          
+          <form action="/predict" method="POST" enctype="multipart/form-data" class="needs-validation" novalidate>
+
+              
+               <div class="col-md-4 mb-3">
+                 <label for="img">Select Image:</label>
+                <input type="file" class="custom-select d-block" id="img" name="img" accept="image/*" required>
+               
+              </div>
+			
+            <button class="btn btn-primary btn-lg btn-block" type="submit">Predict</button>
+          </form>
+        </div>
+      </div>
+      <div class="py-5 text-center">
+          <h2><b><u>{{z}}</u></b></h2>
+      </div>
+
+
+      <footer class="my-5 pt-5 text-muted text-center text-small">
+        <p class="mb-5">&copy; SmartBridge</p>
+        
+      </footer>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+     <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="static/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="static/js/vendor/popper.min.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
+    <script src="static/js/vendor/holder.min.js"></script>
+    <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function() {
+        'use strict';
+
+        window.addEventListener('load', function() {
+          // Fetch all the forms we want to apply custom Bootstrap validation styles to
+          var forms = document.getElementsByClassName('needs-validation');
+
+          // Loop over them and prevent submission
+          var validation = Array.prototype.filter.call(forms, function(form) {
+            form.addEventListener('submit', function(event) {
+              if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+              form.classList.add('was-validated');
+            }, false);
+          });
+        }, false);
+      })();
+    </script>
+	
+  </body>
+</html>
